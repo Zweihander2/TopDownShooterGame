@@ -3,16 +3,14 @@
 Player player;
 Projectile projectile;
 Enemy enemy;
+Enemy enemy1;
+Enemy[] enemies = new Enemy [2];
 
 //Variables
 
 float locationEnemyX;
 float locationEnemyY;
 boolean fireGun = false;
-
-//I failed to create an array, and after 2 days past due, I can't afford to take any more time
-
-int[] value = new int[5];
    
 void setup() {
  
@@ -22,6 +20,10 @@ void setup() {
  player = new Player();
  projectile = new Projectile();
     enemy = new Enemy();
+    enemy1 = new Enemy();
+    enemies[0] = new Enemy();
+    enemies[1] = new Enemy();
+    enemies[2] = new Enemy();
  }
 
 
@@ -52,18 +54,13 @@ void draw() {
    }
  }
    
-  //This is all I have to show for an array, I cannot afford to delay any longer 
-   
-   int n = 0;
-   value[n + 1] = 4;
-   value[n + 2] = 3;  
-   value[n + 3] = 2;  
-   value[n + 4] = 1;  
-   
  //If the enemy gets to the bottom of the screen, the screen goes red and you lose  
    
  if (enemy.position.y >= 400) { 
-   n++;
    background(255, 0, 0);
+ }
+ if (enemy.velocity.y >= 2) {
+  enemy1 = new Enemy();
+  enemy1.display();
  }
 }
