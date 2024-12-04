@@ -54,8 +54,8 @@ class Enemy {
     if (health <= 0) {  
   enemy.reset();
   }
-  if (velocity.y > 0.5) {
-   velocity.y = 0.5; 
+  if (velocity.y >= 2) {
+   velocity.y = 2; 
   }
 } 
  }
