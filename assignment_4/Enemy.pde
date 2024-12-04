@@ -51,5 +51,11 @@ class Enemy {
   if (health <= 0) {  
   enemy.reset();
   }
+    if (health <= 0) {  
+  enemy.reset();
+  }
+  if (velocity.y > 0.5) {
+   velocity.y = 0.5; 
+  }
 } 
  }
