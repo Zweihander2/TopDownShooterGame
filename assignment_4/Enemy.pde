@@ -21,6 +21,7 @@ class Enemy {
  void display() {
    position.y = position.y + velocity.y;
   rectMode(CENTER);
+  noStroke();
   fill(c);
   rect(position.x, position.y, 20, 20);
  }
@@ -41,7 +42,7 @@ class Enemy {
   //For when the enemy is being shot, contains the code for its death and call to reset within
 
  void attack() {
-  if (mouseX >= enemy.position.x - 10 && mouseX <= enemy.position.x + 10) {
+  if (mouseX >= position.x - 10 && mouseX <= position.x + 10) {
     health = health - 1;
     c = color(random(100, 200));
         c = color(random(100, 200));
@@ -49,11 +50,9 @@ class Enemy {
     c = color(255, 0, 0);
   }
   if (health <= 0) {  
-  enemy.reset();
+  reset();
   }
-    if (health <= 0) {  
-  enemy.reset();
-  }
+  
   if (velocity.y >= 2) {
    velocity.y = 2; 
   }
