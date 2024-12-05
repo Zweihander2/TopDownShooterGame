@@ -56,7 +56,7 @@ enemies[0].display();
    }
  }
    
- //If the enemy gets to the bottom of the screen, the screen goes red and you lose  
+ //If the enemy gets to the bottom of the screen, the game resets  
    
  if (enemies[0].position.y >= 400) { 
    enemies[0].retry();
@@ -79,6 +79,9 @@ enemies[0].retry();
    enemies[0].display();
    player.display();
  }
+ 
+ //Code that determines when a new enemy arrives
+ 
  if (enemies[0].velocity.y >= 2) {
 enemies[1].display();
  }

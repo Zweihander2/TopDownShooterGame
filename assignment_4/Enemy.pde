@@ -38,6 +38,9 @@ class Enemy {
   c = color(255, 0, 0);
   velocity.y = velocity.y + 0.1;
  }
+ 
+ //Slightly different from reset, retry changes velocity to its original value
+ 
  void retry() {
    position.y = 0;
   position.x = random(20, 380);
