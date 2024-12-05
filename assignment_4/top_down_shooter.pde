@@ -59,13 +59,25 @@ enemies[0].display();
  //If the enemy gets to the bottom of the screen, the screen goes red and you lose  
    
  if (enemies[0].position.y >= 400) { 
-   background(255, 0, 0);
+   enemies[0].retry();
+   enemies[1].retry();
+   enemies[2].retry();
+   enemies[0].display();
+   player.display();
  }
  if (enemies[1].position.y >= 400) { 
-   background(255, 0, 0);
+   enemies[0].retry();
+   enemies[1].retry();
+   enemies[2].retry();
+   enemies[0].display();
+   player.display();
  }
  if (enemies[2].position.y >= 400) { 
-   background(255, 0, 0);
+enemies[0].retry();
+   enemies[1].retry();
+   enemies[2].retry();
+   enemies[0].display();
+   player.display();
  }
  if (enemies[0].velocity.y >= 2) {
 enemies[1].display();

@@ -38,6 +38,16 @@ class Enemy {
   c = color(255, 0, 0);
   velocity.y = velocity.y + 0.1;
  }
+ void retry() {
+   position.y = 0;
+  position.x = random(20, 380);
+  
+  //resets health and color
+  
+  health = 20;
+  c = color(255, 0, 0);
+  velocity.y = 1;
+ }
 
   //For when the enemy is being shot, contains the code for its death and call to reset within
 
