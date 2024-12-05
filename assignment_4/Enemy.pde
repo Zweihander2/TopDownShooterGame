@@ -7,7 +7,7 @@ class Enemy {
  color c;
  PVector position = new PVector(random(20, 380), 0);
  PVector velocity = new PVector(0, 1);
- PVector acceleration = new PVector(0, -0.8);
+ PVector acceleration = new PVector(0, 0.2);
  int health = 20;
  
  //constructor
@@ -19,7 +19,7 @@ class Enemy {
  //display function that shows the object, its movement, and its color
  
  void display() {
-   position.y = position.y + velocity.y;
+   position.y = position.y + velocity.y + acceleration.y;
   rectMode(CENTER);
   noStroke();
   fill(c);
